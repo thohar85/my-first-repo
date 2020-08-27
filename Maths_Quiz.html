@@ -8,27 +8,43 @@
   <script defer src="maths.js"></script>
   <title>Quiz App</title>
 </head>
-<body onload="loadRandomQuestion()">
-<div class="parent" id="calculator">
-<div id="question" class="div1"> hello there</div>
-<div class="div2 number">1</div>
-<div class="div3 number">2</div>
-<div class="div4 number">3</div>
-<div class="div5"></div>
-<div class="div6 number">4</div>
-<div class="div7 number">5</div>
-<div class="div8 number">6</div>
-<div class="div9 number">7</div>
-<div class="div10 number">8</div>
-<div class="div11 number">9</div>
-<div class="div12">
-  <button onclick="resetState()">Clear</button>
-</div>
-<div class="div13 number">0</div>
-<div class="div14">
-  <button onClick="checkAnswer()" >Check</button>
-</div>
-<div class="div15"> type answer here
+<body onload="loadBothQuestionAnswer(randomNumber())">
+ <div class = "black">
+  <div class = "white">
+    
+    <div id="start">
+      Choose your difficulty level
+      <button id="lv1" onclick="setGameLevel(1)">Level 1</button>
+      <button id="lv2" onclick="setGameLevel(2)">Level 2</button>
+      <button id="lv3" onclick="setGameLevel(3)">Level 3</button>
+    </div>
+
+    <div id="result"></div>
+
+    <div id="game">
+      <div class="parent" id="calculator">
+        <div id="question" class="div1"> hello there</div>
+        <div class="div2 number">1</div>
+        <div class="div3 number">2</div>
+        <div class="div4 number">3</div>
+        <div class="div5"></div>
+        <div class="div6 number">4</div>
+        <div class="div7 number">5</div>
+        <div class="div8 number">6</div>
+        <div class="div9 number">7</div>
+        <div class="div10 number">8</div>
+        <div class="div11 number">9</div>
+        <div class="div12">
+          <button class = "button" onclick="resetState()">Clear</button>
+        </div>
+        <div class="div13 number">0</div>
+        <div class="div14">
+          <button class = "button" onclick="checkAnswer(selectedRandomNumber)" >Check</button>
+        </div>
+        <div class="div15"> answer appears here
+        
+        </div>
+    </div>
 
 </div>
 </div>
